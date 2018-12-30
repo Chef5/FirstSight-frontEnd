@@ -1,0 +1,91 @@
+.body{
+	background: url(../img/login_bg.jpg) no-repeat;
+	background-size: cover;
+	height: 500px;
+}
+
+/* 主体内容 */
+.bd-con{
+	position: absolute;
+	border: 1px solid #B9BBBE;
+	width: 400px;
+	height: 400px;
+	top: 270px;
+	right: 200px;
+	background-color: white;
+}
+.bd-con-top{
+	margin-top: 10px;
+	margin-left: 20px;
+	height: 60px;
+}
+.bd-con-main{
+	margin-top: 20px;
+}
+.bd-con-top button{
+	width: 100px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #484848;
+	border: 1px solid #B9BBBE;
+	background-color: white;
+}
+.bd-con-top button:hover{
+	color: #FF6A00;
+}
+
+.bd-con-main-login{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 50px;
+}
+.bd-con-main-login input{
+	height: 40px;
+	margin-top: 10px;
+}
+.bd-con-main-login span{
+	font-size: 15px;
+	color: red;
+	line-height: 30px;
+}
+.bd-con-main-login button{
+	height: 50px;
+	width: 100%;
+	margin-top: 40px;
+	background-color: #FF6A00;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.bd-con-main-reg{
+	width: 80%;
+	margin-left: 10%;
+}
+.bd-con-main-reg input{
+	height: 40px;
+	margin-top: 6px;
+}
+.vercode{
+	width: 100px;
+}
+.bd-con-main-reg img{
+	margin-top: -76px;
+	margin-left: 120px;
+	height: 36px;
+}
+.bd-con-main-reg span{
+	display: block;
+	margin-top: -20px;
+	font-size: 15px;
+	color: red;
+}
+.bd-con-main-reg button{
+	height: 50px;
+	width: 100%;
+	margin-top: 20px;
+	background-color: #FF6A00;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}

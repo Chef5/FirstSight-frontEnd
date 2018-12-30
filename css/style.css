@@ -1,0 +1,167 @@
+.page{
+	background-color: white;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.heder{
+	display: flex;
+	flex-direction: column;
+	height: 220px;
+}
+.body{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+}
+.footer{
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	margin-top: 50px;
+}
+
+/* 全局样式 */
+.kind-title{
+	font-size: 25px;
+	margin-right: 10px;
+}
+.detail-title{
+	font-size: 24px;
+	font-weight: 700;
+}
+.detail-title-disc{
+	font-size: 18px;
+	color: red;
+}
+
+/* 头部子class */
+.hd-top{
+	display: flex;
+	flex-direction: row;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	padding-left: 200px;
+	padding-right: 0px;
+	background-color: #f2f2f2;
+}
+.hd-top-left{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.hd-top-right{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.hd-top-left-item{
+	display: flex;
+	flex-direction: row;
+}
+.hd-top-right-item{
+	display: flex;
+	flex-direction: row;
+	margin-left: 10px;
+}
+.hd-top-left-item img{
+	
+}
+.hd-top-left-item span{
+	margin-left: 10px;
+}
+.hd-top-right-item-info{
+	font-style: italic;
+}
+.hd-top-right-item a{
+	text-decoration: none;
+	color: black;
+}
+
+
+.hd-display{
+	display: flex;
+	flex-direction: row;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.hd-display-logo{
+	flex: 1;
+	height: 180px;
+}
+.hd-display-logo img{
+	margin-top: 10px;
+	height: 150px;
+}
+.hd-display-serch{
+	flex: 1;
+	height: 180px;
+}
+.hd-display-service{
+	flex: 1;
+	height: 180px;
+	display: flex;
+	flex-direction: row;
+}
+.hd-display-logo img{
+	
+}
+.hd-display-service-item{
+	flex: 1;
+	margin-left: 50px;
+	margin-top: 60px;
+	font-size: 20px;
+}
+.col-lg-6{
+	width: 100%;
+	max-width: 100%;
+	margin-top: 60px;
+}
+
+
+/* 主体子class */
+.body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+/* 底部class */
+.footer{
+	display: flex;
+	flex-direction: column;
+}
+.ft-focus{
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+}
+.ft-menu{
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+	margin-top: 20px;
+	background-color: #F2F2F2;
+}
+.ft-scurity{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+.ft-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer img{
+	flex: 1;
+	width: 80%;
+}
+.ft-scurity img,.ft-info img{
+	width: 60%;
+}

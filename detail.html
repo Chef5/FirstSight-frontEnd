@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>忘情巴黎-初见花店</title>
+		<script src="./js/vue.js"></script>   <!-- 引入js -->
+		<script src="./js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/model.css" />
+		<link rel="stylesheet" href="css/detail.css" />
+	</head>
+	<body>
+		<div id="vueroot" class="page">
+			<!-- 头部固定内容 -->
+			<div class="heder">
+				<!-- 最顶部注册、登录、购物车显示 -->
+				<div class="hd-top">
+					<div class="hd-top-left">
+						<div class="ht-top-left-item">
+							<!-- <img src="img/1.jpg"/> -->
+							<span>关注微信</span>
+							<span>微信小程序</span>
+						</div>
+					</div>
+					<div class="hd-top-right">
+						<div class="hd-top-right-item">
+							<a>登录</a>/<a>注册</a>
+						</div>
+						<div class="hd-top-right-item">
+							<a>订单查询</a>
+						</div>
+						<div class="hd-top-right-item">
+							<span class="glyphicon glyphicon-shopping-cart"></span><a>购物车（2）</a>
+						</div>
+						<div class="hd-top-right-item">
+							<span class="ht-top-right-item-info">中国初见花店·FirstSight</span>
+						</div>
+					</div>
+				</div>
+				<!-- logo、搜索、服务展示区 -->
+				<div class="hd-display">
+					<div class="hd-display-logo">
+						<img src="img/logo.jpg"/>
+					</div>
+					<div class="hd-display-serch">
+						<div class="col-lg-6" >
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="商品关键、编号">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">搜索</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="hd-display-service">
+						<div class="hd-display-service-item">
+							<span><span class="glyphicon glyphicon-earphone"></span>15500000000</span>
+						</div>
+						<div class="hd-display-service-item">
+							<span><span class="glyphicon glyphicon-comment"></span>在线客服</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 主体部分 -->
+			<div class="body">
+				<!-- 菜单显示 -->
+				<div class="bd-menu">
+					<div class="bd-menu-con">
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+					</div>
+				</div>
+				<div class="bd-con">
+					<div class="bd-con-nav">
+						<a href="#">首页</a>&gt;<a href="#">爱情鲜花</a>&gt;<a href="#">忘情巴黎</a>
+					</div>
+					<div class="bd-con-main">
+						<div class="bd-con-main-top">
+							<div class="bd-con-main-top-left"><img src="img/flower/9012009.jpg" /></div>
+							<div class="bd-con-main-top-right">
+								<div class="bd-con-main-top-right-title">
+									<span class="detail-title">忘情巴黎</span><br>
+									<span class="detail-title-disc">浪漫唯美 女神挚爱</span>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">类 别：</div>
+									<div class="bd-con-main-top-right-info-text">爱情鲜花</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">编 号：</div>
+									<div class="bd-con-main-top-right-info-text">9012009</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">材 料：</div>
+									<div class="bd-con-main-top-right-info-text">33枝红玫瑰，石竹梅围绕</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">包 装：</div>
+									<div class="bd-con-main-top-right-info-text">黑色条纹纸，红色缎带花结</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">花 语：</div>
+									<div class="bd-con-main-top-right-info-text">只想和你忘掉一切烦恼，尽情沉醉在最浪漫的气氛中。只想和你忘掉一切烦恼，尽情沉醉在最浪漫的气氛中。</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">附 送：</div>
+									<div class="bd-con-main-top-right-info-text">下单填写留言，即免费赠送精美贺卡！</div>
+								</div>
+								<div class="bd-con-main-top-right-info">
+									<div class="bd-con-main-top-right-info-titile">配 送：</div>
+									<div class="bd-con-main-top-right-info-text">全国</div>
+								</div>
+								<div class="bd-con-main-top-right-price">
+									<div class="bd-con-main-top-right-price-pre"><s>原 价：¥393</s> &nbsp;&nbsp;&nbsp;&nbsp;<span>8</span>折优惠</div>
+									<div class="bd-con-main-top-right-price-true">折 后：<span>¥298</span></div>
+								</div>
+								<div class="bd-con-main-top-right-num">
+									<div class="input-group">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">-</button>
+										</span>
+										<input type="text" class="form-control" placeholder="购买数量">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">+</button>
+										</span>
+									</div>
+								</div>
+								<div class="bd-con-main-top-right-buy">
+									<button class="btn btn-default" type="button">立即购买</button>
+								</div>
+								
+							</div>
+						</div>
+						<div class="bd-con-main-detail">
+							<img src="img/flower/by_20180611134635481.jpg"/>
+							<img src="img/flower/by_20180702095709936.jpg" />
+							<img src="img/flower/2015420174953899997.jpg" />
+							<img src="img/flower/20151223184607197772.jpg" />
+							<img src="img/flower/20151223184694302325.jpg" />
+							<img src="img/flower/2015420175007241855.jpg" />
+							<img src="img/flower/by_20180719135050502.jpg" />
+							<img src="img/flower/xianhua_cardstyle.jpg" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- 底部固定部分 -->
+			<div class="footer">
+				<!-- 引导关注部分 -->
+				<div class="ft-focus">
+					<img src="img/focus.png" />
+					<img src="img/focus2.png" />
+				</div>
+				
+				<!-- 底部菜单显示 -->
+				<div class="ft-menu">
+					<img src="img/ft-menu.png" />
+				</div>
+				
+				<!-- 认证展示 -->
+				<div class="ft-scurity">
+					<img src="img/ft-scurity.png" />
+				</div>
+				
+				<!-- 资质备案许可展示 -->
+				<div class="ft-info">
+					<img src="img/ft-info.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

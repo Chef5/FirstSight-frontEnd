@@ -1,0 +1,35 @@
+/* 主体菜单详细 */
+.bd-menu{
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	width: 100%;
+	align-items: center;
+	background-color: #FF6A00;
+}
+.bd-menu-con{
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	width: 40%;
+	align-items: center;
+}
+.bd-menu-con-item{
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+.bd-menu-con-item span{
+	width: 100%;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+}
+.bd-menu-con-item a{
+	color:white;
+	text-underline: none;
+}
+.bd-menu-con-item a:hover{
+	text-decoration: none;
+	font-size: 120%;
+}
