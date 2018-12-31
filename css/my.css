@@ -1,0 +1,123 @@
+/* 全局样式 */
+.order-state{
+	color: #FF6A00;
+	width: 100px;
+}
+
+
+.bd-con{
+	width: 80%;
+	margin-left: 10%;
+}
+/* 导航 */
+.bd-con-nav{
+	margin-top: 20px;
+}
+.bd-con-nav a{
+	text-decoration: none;
+	color: #484848;
+}
+.bd-con-nav a:hover{
+	color: #FF6A00;
+}
+.bd-con-nav a:first-child{
+	font-weight: 700;
+}
+.bd-con-nav a:last-child{
+	color: #FF6A00;
+}
+/* 主要内容 */
+.bd-con-main{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	border: 1px solid #B9BBBE;
+}
+.bd-con-main-left{
+	width: 200px;
+	margin-top: 30px;
+}
+.bd-con-main-right{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.bd-con-main-left a{
+	text-decoration: none;
+	color: #484848;
+	width: 100%;
+	text-align: center;
+}
+.bd-con-main-left a:hover{
+	color: #FF6A00;
+	background-color: #FF6A00;
+	color: white;
+}
+.bd-con-main-left a:first-child{
+	font-weight: 700;
+	background-color: #FF6A00;
+	color: white;
+}
+
+
+.bd-con-main-right-item{
+	margin-left: 20px;
+}
+.bd-con-main-right-item-top{
+	height: 30px;
+	font-size: 18px;
+	border-bottom: 1px solid #B9BBBE;
+}
+.bd-con-main-right-item-some{
+	display: flex;
+	flex-direction: column;
+}
+.bd-con-main-right-item-some table{
+	width: 100%;
+}
+.bd-con-main-right-item-some tr{
+	border-bottom: 1px solid #B9BBBE;
+	border-left: 1px solid #B9BBBE;
+	border-right: 1px solid #B9BBBE;
+}
+.bd-con-main-right-item-some th{
+	background-color: #dddddd;
+}
+.bd-con-main-right-item-some td{
+	align-items: center;
+}
+.bd-con-main-right-item-some td:first-child,.bd-con-main-right-item-some th:first-child{
+	padding-left: 10px;
+}
+.bd-con-main-right-item-some table img{
+	width: 50px;
+}
+.num-control{
+	display: block;
+	height: 28px;
+	max-width: 50px;
+}
+.bd-con-main-right-item-some button{
+	height: 28px;
+	width: 80px;
+	padding: 1px;
+}
+td .input-group-btn button{
+	height: 28px;
+	width: 28px;
+	padding: 1px;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 700;
+}
+.bd-con-main-right-item-some-info{
+	display: flex;
+	flex-direction: row;
+	width: 400px;
+}
+.bd-con-main-right-item-some-info a{
+	text-decoration: none;
+	color: #000000;
+}

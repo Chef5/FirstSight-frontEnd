@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="./js/vue.js"></script>   <!-- 引入js -->
+		<script src="./js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/model.css" />
+		<link rel="stylesheet" href="css/my.css" />
+	</head>
+	<body>
+		<div id="vueroot" class="page">
+			<!-- 头部固定内容 -->
+			<div class="heder">
+				<!-- 最顶部注册、登录、购物车显示 -->
+				<div class="hd-top">
+					<div class="hd-top-left">
+						<div class="ht-top-left-item">
+							<!-- <img src="img/1.jpg"/> -->
+							<span>关注微信</span>
+							<span>微信小程序</span>
+						</div>
+					</div>
+					<div class="hd-top-right">
+						<div class="hd-top-right-item">
+							<a>登录</a>/<a>注册</a>
+						</div>
+						<div class="hd-top-right-item">
+							<a>订单查询</a>
+						</div>
+						<div class="hd-top-right-item">
+							<span class="glyphicon glyphicon-shopping-cart"></span><a>购物车（2）</a>
+						</div>
+						<div class="hd-top-right-item">
+							<span class="ht-top-right-item-info">中国初见花店·FirstSight</span>
+						</div>
+					</div>
+				</div>
+				<!-- logo、搜索、服务展示区 -->
+				<div class="hd-display">
+					<div class="hd-display-logo">
+						<img src="img/logo.jpg"/>
+					</div>
+					<div class="hd-display-serch">
+						<div class="col-lg-6" >
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="商品关键、编号">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">搜索</button>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="hd-display-service">
+						<div class="hd-display-service-item">
+							<span><span class="glyphicon glyphicon-earphone"></span>15500000000</span>
+						</div>
+						<div class="hd-display-service-item">
+							<span><span class="glyphicon glyphicon-comment"></span>在线客服</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 主体部分 -->
+			<div class="body">
+				<!-- 菜单显示 -->
+				<div class="bd-menu">
+					<div class="bd-menu-con">
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+						<div class="bd-menu-con-item"><span><a href="#">爱情鲜花</a></span></div>
+					</div>
+				</div>
+				<div class="bd-con">
+					<div class="bd-con-nav">
+						<a href="#">首页</a>&gt;<a href="#">个人中心</a>
+					</div>
+					<div class="bd-con-main">
+						<div class="bd-con-main-left">
+							<div class="list-group">
+							  <a href="#" class="list-group-item disabled">
+								个人中心
+							  </a>
+							  <a href="#" class="list-group-item" v-on:click="showCart" >购物车</a>
+							  <a href="#" class="list-group-item" v-on:click="showOrder" >我的订单</a>
+							  <a href="#" class="list-group-item" v-on:click="showSite" >收货地址</a>
+							  <a href="#" class="list-group-item" v-on:click="showSetting" >个人设置</a>
+							</div>
+						</div>
+						<div class="bd-con-main-right">
+							<!-- 购物车 -->
+							<div class="bd-con-main-right-item" v-show="showcart">
+								<div class="bd-con-main-right-item-top">
+									购物车中共有：8件商品
+								</div>
+								<div class="bd-con-main-right-item-some">
+									<table>
+										<tr><th><input type="checkbox" />全选</th><th>序号</th><th>商品内容</th><th>数量</th><th>单价</th><th>折扣</th><th>总额</th><th>操作</th></tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td>1</td>
+											<td class="bd-con-main-right-item-some-info">
+												<div><img src="img/flower/9012009.jpg" /></div>
+												<div><a href="#" title="查看商品详细">忘情巴黎-浪漫唯美 女神挚爱</a></div> 
+											</td>
+											<td>
+												<div class="input-group">
+													<span class="input-group-btn">
+														<button class="btn btn-default" type="button">-</button>
+													</span>
+													<input type="text" class="num-control" value="1">
+													<span class="input-group-btn">
+														<button class="btn btn-default" type="button">+</button>
+													</span>
+												</div>
+											</td>
+											<td>¥298</td>
+											<td>8折</td>
+											<td><span>¥298</span></td>
+											<td><button>移除</button></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<!-- 我的订单 -->
+							<div class="bd-con-main-right-item" v-show="showorder">
+								<div class="bd-con-main-right-item-top">
+									我的订单
+								</div>
+								<div class="bd-con-main-right-item-some">
+									<table>
+										<tr><th>订单号</th><th>商品内容</th><th>订单状态</th><th>收货人</th><th>数量</th><th>单价</th><th>折扣</th><th>总额</th><th>操作</th></tr>
+										<tr>
+											<td>10000</td>
+											<td class="bd-con-main-right-item-some-info">
+												<div><img src="img/flower/9012009.jpg" /></div>
+												<div><a href="#" title="查看商品详细">忘情巴黎-浪漫唯美 女神挚爱</a></div> 
+											</td>
+											<td class="order-state">已支付</td>
+											<td>何玉梅</td>
+											<td>1</td>
+											<td>¥383</td>
+											<td>8折</td>
+											<td><span>¥298</span></td>
+											<td><button>确认收货</button></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<!-- 收货地址 -->
+							<div class="bd-con-main-right-item" v-show="showsite">
+								<div class="bd-con-main-right-item-top">
+									收货地址
+								</div>
+								<div class="bd-con-main-right-item-some">
+									<table>
+										<tr><th>收货人</th><th>电话</th><th>地址</th><th>操作</th></tr>
+										<tr>
+											<td>
+												<span v-show="hideedit">吴俊</span>
+												<input type="text" maxlength="5" value="吴俊" placeholder="收货人" v-show="showedit" />
+											</td>
+											<td>
+												<span v-show="hideedit">15500000000</span>
+												<input type="text" maxlength="11" value="15500000000" placeholder="电话" v-show="showedit"  />
+											</td>
+											<td>
+												<span v-show="hideedit">辽宁省大连市甘井子区大连工业大学B座网络中心侧门B128</span>
+												<input type="text" maxlength="40" value="辽宁省大连市甘井子区大连工业大学B座网络中心侧门B128" placeholder="具体地址" v-show="showedit" />
+											</td>
+											<td>
+												<a href="#" v-show="hideedit" v-on:click="editSite">编辑</a>&nbsp;&nbsp;<a href="#" v-show="hideedit">删除</a>
+												<a href="#" v-show="showedit" v-on:click="editConfirm">确认</a>&nbsp;&nbsp;<a href="#" v-show="showedit" v-on:click="hideSite">取消</a>
+											</td>
+										</tr>
+									</table>
+									<div style="margin-top: 20px;">
+										<button>新增地址</button><br>
+										<input type="text" maxlength="5" value="吴俊" placeholder="收货人" />
+										<input type="text" maxlength="11" value="15500000000" placeholder="电话" /><br>
+										<input type="text" maxlength="40" value="辽宁省大连市甘井子区大连工业大学B座网络中心侧门B128" placeholder="具体地址" /> <br>
+										<a href="#">确认</a>&nbsp;&nbsp;<a href="#">取消</a>
+									</div>
+								</div>
+							</div>
+							<!-- 个人设置 -->
+							<div class="bd-con-main-right-item" v-show="showsetting">
+								<div class="bd-con-main-right-item-top">
+									个人设置
+								</div>
+								<div class="bd-con-main-right-item-some">
+									<div style="margin-top: 20px;">
+										昵称：<input type="text" maxlength="5" value="吴俊" placeholder="昵称" /><a href="#">确认</a><br>
+										手机：<input type="text" maxlength="11" value="15500000000" placeholder="登录手机号" /><a href="#">确认</a><br>
+										原密码：<input type="password" maxlength="20" placeholder="原密码" /> <br>
+										新密码：<input type="password" maxlength="20" placeholder="新密码" /> <br>
+										确认密码：<input type="password" maxlength="20" placeholder="确认密码" /><a href="#">确认</a> <br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+			<!-- 底部固定部分 -->
+			<div class="footer">
+				<!-- 引导关注部分 -->
+				<div class="ft-focus">
+					<img src="img/focus.png" />
+					<img src="img/focus2.png" />
+				</div>
+				
+				<!-- 底部菜单显示 -->
+				<div class="ft-menu">
+					<img src="img/ft-menu.png" />
+				</div>
+				
+				<!-- 认证展示 -->
+				<div class="ft-scurity">
+					<img src="img/ft-scurity.png" />
+				</div>
+				
+				<!-- 资质备案许可展示 -->
+				<div class="ft-info">
+					<img src="img/ft-info.png" />
+				</div>
+			</div>
+		</div>
+	<script>
+		new Vue({
+			el:"#vueroot",
+			data:{
+				showcart: false,
+				showorder: false,
+				showsite: false,
+				showsetting: true,
+				showedit: false,
+				hideedit: true
+			},
+			methods:{
+				showCart: function(){
+					this.showcart = true,
+					this.showorder = false,
+					this.showsite = false,
+					this.showsetting = false
+				},
+				showOrder: function(){
+					this.showcart = false,
+					this.showorder = true,
+					this.showsite = false,
+					this.showsetting = false
+				},
+				showSite: function(){
+					this.showcart = false,
+					this.showorder = false,
+					this.showsite = true,
+					this.showsetting = false
+				},
+				showSetting: function(){
+					this.showcart = false,
+					this.showorder = false,
+					this.showsite = false,
+					this.showsetting = true
+				},
+				editSite: function(){
+					this.hideedit = false,
+					this.showedit = true
+				},
+				hideSite: function(){
+					this.hideedit = true,
+					this.showedit = false
+				},
+				editConfirm: function(){
+					
+				}
+			},
+			created: function(){
+				
+			},
+		})
+	</script>
+	</body>
+</html>
