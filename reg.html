@@ -133,11 +133,15 @@
 						this.showreg = false;
 					},
 					showReg: function(){
+						var that = this;
 						this.showlogin = false;
 						this.showreg = true;
+						$.getJSON("https://dc.1zdz.cn/api/root/getCreateCode.php",function(data){
+							console.log(data);
+						});
 					}
 				},
-				created: function(){
+				updated: function(){
 					
 				},
 			})
